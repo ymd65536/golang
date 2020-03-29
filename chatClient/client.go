@@ -36,5 +36,5 @@ func (c *client) write() {
 }
 
 func main() {
-	fmt.Println("Hello,World")
+	//fmt.Println("Hello,World")
 }

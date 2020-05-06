@@ -28,7 +28,7 @@ func main() {
 	//ポート番号を自由に設定できるようにする。
 	var addr = flag.String("addr", ":8080", "アプリケーションのアドレス")
 	r := newRoom()
-	http.Handle("/chat", MustAuth(&templateHandler{filename: "chat.html"}))
+	http.Handle("/chat", mustAuth(&templateHandler{filename: "chat.html"}))
 	http.Handle("/login", &templateHandler{filename: "login.html"})
 	http.Handle("/room", r)
 

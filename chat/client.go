@@ -12,6 +12,7 @@ type client struct {
 	room   *room
 }
 
+//読み出し
 func (c *client) read() {
 	for {
 		if _, msg, err := c.socket.ReadMessage(); err == nil {
@@ -22,6 +23,7 @@ func (c *client) read() {
 	}
 }
 
+//書き出し
 func (c *client) write() {
 	for msg := range c.send {
 		if err := c.socket.WriteMessage(websocket.TextMessage, msg); err != nil {

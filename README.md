@@ -6,6 +6,12 @@ VisualStudioCodeでGoを使うときはデバッガのコマンドを忘れず�
 go get -u github.com/derekparker/delve/cmd/dlv  
   
   
+## OAuth2パッケージのインストール方法  
+go get github.com/stretchr/gomniauth/...  
+
+## objx パッケージのインストール方法
+go get github.com/stretchr/objx  
+
 ## Chatの認証情報について  
 
 mainFunctionにはClinetIDとkeyを入れる必要がある。  

@@ -23,3 +23,11 @@ Google Developer Consoleでこのアプリケーションの認証情報を登�
 docker上で動作できる環境の構築  
 クラウド移行  
 ポートフォリオに掲載  
+
+#他
+## Goでexeファイルを作成する
+go build -o [アプリケーション名]
+
+## Windows上で作成する場合は拡張子を付けてbuild
+go build -o [アプリケーション名].exe
+

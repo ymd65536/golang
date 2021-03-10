@@ -1,10 +1,14 @@
 package main
 
-import "github.com/gorilla/websocket"
+import (
+	"fmt"
 
-/*
-  入退室の機能を追加する
-*/
+	"github.com/gorilla/websocket"
+)
+
+type room struct {
+	forward chan []byte
+}
 
 type client struct {
 	socket *websocket.Conn
@@ -12,7 +16,6 @@ type client struct {
 	room   *room
 }
 
-//読み出し
 func (c *client) read() {
 	for {
 		if _, msg, err := c.socket.ReadMessage(); err == nil {
@@ -23,7 +26,6 @@ func (c *client) read() {
 	}
 }
 
-//書き出し
 func (c *client) write() {
 	for msg := range c.send {
 		if err := c.socket.WriteMessage(websocket.TextMessage, msg); err != nil {
@@ -31,4 +33,8 @@ func (c *client) write() {
 		}
 	}
 	c.socket.Close()
+}
+
+func main() {
+	//fmt.Println("Hello,World")
 }

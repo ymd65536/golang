@@ -1,33 +1,28 @@
-# Simple Chat Client Go について
+# はじめに
 
-## VisualStudioCodeのデバッガ  
+## VisualStudioCode のデバッガ
 
-VisualStudioCodeでGoを使うときはデバッガのコマンドを忘れずに叩く  
-go get -u github.com/derekparker/delve/cmd/dlv  
-  
-  
-## OAuth2パッケージのインストール方法  
-go get github.com/stretchr/gomniauth/...  
+VisualStudioCode で Go を使うときはデバッガのコマンドを忘れずに叩く  
+go get -u github.com/derekparker/delve/cmd/dlv
+
+## OAuth2 パッケージのインストール方法
+
+go get github.com/stretchr/gomniauth/...
 
 ## objx パッケージのインストール方法
-go get github.com/stretchr/objx  
 
-## Chatの認証情報について  
+go get github.com/stretchr/objx
 
-mainFunctionにはClinetIDとkeyを入れる必要がある。  
-Google Developer Consoleでこのアプリケーションの認証情報を登録して  
-クライアントIDと秘密鍵(key)を取得しないといけない。  
+## gin をインストール
 
-## 今後の方針・やるべきこと
-アプリケーションのクライアントIDとkeyを暗号化すること  
-docker上で動作できる環境の構築  
-クラウド移行  
-ポートフォリオに掲載  
+go get github.com/gin-gonic/gin
 
-# 他
-## Goでexeファイルを作成する
+## 他
+
+## Go で exe ファイルを作成する
+
 go build -o [アプリケーション名]
 
-## Windows上で作成する場合は拡張子を付けてbuild
-go build -o [アプリケーション名].exe
+## Windows 上で作成する場合は拡張子を付けて build
 
+go build -o [アプリケーション名].exe
